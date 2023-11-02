@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joystick Junkies Arcade Trailer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Fuente pixel art -->
+    <style>
+        body {
+            background-color: #000;
+            overflow: hidden;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #FFF; /* Color del texto a blanco */
+        }
+
+        #gameArea {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #ship {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 20px;
+            background-color: #19afe1;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation: moveShip 5s infinite;
+            z-index: 1;
+        }
+
+        #bullet {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 15px;
+            background-color: #FFF;
+            animation: shootBullet 1s infinite;
+            animation-delay: 1s;
+            z-index: 1;
+            animation: moveShip 5s infinite,shootBullet 0.5s infinite;
+        }
+
+        @keyframes moveShip {
+            0%, 100% {
+                left: 10%;
+            }
+            50% {
+                left: 90%;
+            }
+        }
+
+        @keyframes shootBullet {
+            0% {
+                bottom: 30px;
+                visibility: visible;
+            }
+            100% {
+                bottom: 100vh;
+                visibility: hidden;
+            }
+        }
+
+        .invader {
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            background-color: red;
+            clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+            animation: moveInvader 6s infinite, vibrate 0.5s infinite;
+            z-index: 1;
+        }
+
+        @keyframes vibrate {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        #invader1 {
+            top: 5%;
+            left: 30%;
+            animation-delay: 1s;
+        }
+
+        #invader2 {
+            top: 5%;
+            left: 40%;
+            animation-delay: 2s;
+        }
+
+        #invader3 {
+            top: 5%;
+            left: 56%;
+            animation-delay: 0.5s;
+        }
+
+        #invader4 {
+            top: 5%;
+            left: 55%;
+            animation-delay: 1.5s;
+        }
+
+        #contentOverlay {
+            position: absolute;
+            width: 30%;
+            height: auto;   
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        #contentOverlay section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contentOverlay title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        #contentOverlay h1 {
+            font-size: 7vw;
+            line-height: 5.5vw;
+            margin-top: 20px;
+        }
+
+        #subtitle {
+            font-size: 8px;
+           color: rgb(240, 8, 147);
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gameArea">
+   <!--      <div class="invader" id="invader1"></div>
+        <div class="invader" id="invader2"></div>
+        <div class="invader" id="invader3"></div>
+        <div class="invader" id="invader4"></div>  -->
+        <div id="ship"></div>
+        <div id="bullet"></div>
+    </div>
+
+    <div id="contentOverlay">
+        <section>
+            <title>Titulo del juego</title>
+            <h1>JOYSTICK JUNKIES</h1>
+            <div id="subtitle">LLEVA TU CONSOLA AL SIGUIENTE NIVEL</div>
+        </section>
+    </div>
+</body>
+
+</html>
