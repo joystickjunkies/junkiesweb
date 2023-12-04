@@ -1,171 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joystick Junkies</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Fuente pixel art -->
     <style>
         body {
-            background-color: #000;
-            overflow: hidden;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            color: #FFF; /* Color del texto a blanco */
+            background-color: #faf9f9;
+            color: #070707;
+            font-family: monospace;
         }
-
-        #gameArea {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        #ship {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 20px;
-            background-color: #e11948;
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            animation: moveShip 5s infinite;
-            z-index: 1;
-        }
-
-        #bullet {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 15px;
-            background-color: #FFF;
-            animation: shootBullet 1s infinite;
-            animation-delay: 1s;
-            z-index: 1;
-            animation: moveShip 5s infinite,shootBullet 0.5s infinite;
-        }
-
-        @keyframes moveShip {
-            0%, 100% {
-                left: 10%;
-            }
-            50% {
-                left: 90%;
-            }
-        }
-
-        @keyframes shootBullet {
-            0% {
-                bottom: 30px;
-                visibility: visible;
-            }
-            100% {
-                bottom: 100vh;
-                visibility: hidden;
-            }
-        }
-
-        .invader {
-            position: absolute;
-            width: 30px;
-            height: 20px;
-            background-color: red;
-            clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
-            animation: moveInvader 6s infinite, vibrate 0.5s infinite;
-            z-index: 1;
-        }
-
-        @keyframes vibrate {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-5px);
-            }
-        }
-
-        #invader1 {
-            top: 5%;
-            left: 30%;
-            animation-delay: 1s;
-        }
-
-        #invader2 {
-            top: 5%;
-            left: 40%;
-            animation-delay: 2s;
-        }
-
-        #invader3 {
-            top: 5%;
-            left: 56%;
-            animation-delay: 0.5s;
-        }
-
-        #invader4 {
-            top: 5%;
-            left: 55%;
-            animation-delay: 1.5s;
-        }
-
-        #contentOverlay {
-            position: absolute;
-            width: 30%;
-            height: auto;   
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
+        #main {
             z-index: 2;
+            background-size: 15px 15px;
+            background-image: radial-gradient(circle, #060606 0.7px, rgba(0, 0, 0, 0) 0.7px);
+            height: 92vh;
+            margin: 2vw;
+            margin-top: 4vh;
+            padding: 50px;
         }
-
-        #contentOverlay section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #contentOverlay title {
+        #main h2 {
             font-size: 24px;
             margin-bottom: 10px;
         }
-
-        #contentOverlay h1 {
-            font-size: 7vw;
-            line-height: 5.5vw;
+        #main .logo h1 {
+            font-size: 1.5vw;
+            line-height: 1.5vw;
             margin-top: 20px;
+            font-family: monospace;
+            text-align: left;
+            width: min-content;
         }
-
-        #subtitle {
-            font-size: 8px;
-           color: rgb(240, 8, 147);
-            margin-top: 5px;
+        #main section.logo{
+            padding: 15px;
+          /*   background-size: 15px 15px;
+            background-image: radial-gradient(circle, #060606 0.7px, rgba(0, 0, 0, 0) 0.7px); */
+        }
+        section.content{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content article{
+            display: flex;
+            flex-direction: column;
+            max-width: 20%;
+            padding: 39px 15px;
+            min-width: 200px;
+            background-color: white;
+            margin: 15px;
         }
     </style>
 </head>
 
 <body>
-    <div id="gameArea">
-   <!--      <div class="invader" id="invader1"></div>
-        <div class="invader" id="invader2"></div>
-        <div class="invader" id="invader3"></div>
-        <div class="invader" id="invader4"></div>  -->
-        <div id="ship"></div>
-        <div id="bullet"></div>
-    </div>
-
-    <div id="contentOverlay">
-        <section>
-            <title>Titulo del juego</title>
+    <div id="main">
+        <section class="logo">
             <h1>JOYSTICK JUNKIES</h1>
-<!--             <div id="subtitle">LLEVA TU CONSOLA AL SIGUIENTE NIVEL</div>
- -->        </section>
+        </section>
+        <section class="content">
+            <article>
+                <small>04.11.03</small>
+                <h1>Instalación Chip RP2040</h1>
+                <p>Instalamos un chip que extiende las funcionalidades de tu consola y te permite ejecutar copias de juegos</p>
+            </article>
+            <article>
+                <small>04.11.03</small>
+                <h1>Backup del sistema original</h1>
+                <p>Relizamos un backup del sistema original para que en caso de errores tengas una copia del mismo.</p>
+            </article>
+            <article>
+                <small>04.11.03</small>
+                <h1>No perdes el online</h1>
+                <p>Vas a poder seguir jugando online como lo venias haciendo</p>
+            </article>
+            <article>
+                <small>04.11.03</small>
+                <h1>Emmunand, WHAT?$#%$%#@</h1>
+                <p>Te creamos un copia del sistema original donde vas a poder instalar copias de juegos, esta copia se llama EMMUNAND</p>
+            </article>
+        </section>
     </div>
 </body>
-
 </html>
