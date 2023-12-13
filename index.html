@@ -51,6 +51,9 @@
             font-size: 11px;
             line-height: 19px;
         }
+        article h1{
+            margin-top: 5px;
+        }
         video {
             position: fixed;
             left: 0;
@@ -65,21 +68,22 @@
         .logoAndVideo{
             width: 820px;
             min-width: 400px;
-            color: white;
             position: fixed;
-            z-index: -9999;
+     /*        z-index: -9999; */
         }
         button{
+            display: block;
             width: 234px;
             height: 50px;
-            float: right;
+           /*  float: right; */
             color: white;
-            background-color: black;
+            background-color: green;
             border: none;
-            position: fixed;
+         /*    position: fixed;
             top:67vh;
-            left:56vw;
+            left:56vw; */
             border-radius: 25px;
+            margin-top: 20px;
         }
     /*     article.green{
             border-top: 2px solid green;
@@ -106,11 +110,41 @@
             color: white;
         }
 
+        article p small.red{
+            color: red;
+        }
+
         @media (max-width:1079px) {
             article{
                 max-width: 100%;
                 width: 100%;
             }
+        }
+        @media (max-width:874px) {
+         body{
+            margin: 0;
+         }   
+         #main{
+            margin: 0;
+            margin-top: 0;
+            padding: 0;
+         }   
+         .home{
+            flex-direction: column;
+         }
+         #main section.logoAndVideo{
+            width: 100%;
+            background-color: white;
+            padding: 65px;
+         }
+         #main {
+            height: 100%;
+         }   
+         #articles{
+            margin: 2vw;
+            padding: 50px;
+            margin-top: 260px;
+         }
         }
     </style>
 </head>
@@ -124,25 +158,41 @@
                 <!-- <video playinline="true" muted="true" loop="true" autoplay="" src="videos/hd.mp4" type="video/mp4" class="media-document mac video"></video> -->
                 <h1>JOYSTICK JUNKIES</h1>
                 <small>Nintendo Switch Modchips</small>
+                <button>Reservá tu Chip</button>
             </section>
             <section id="articles">
                 <article  class="magenta pico">
                     <small>Picofly</small>
-                    <h1>Instalación Chip RP2040</h1>
-                    <p>Instalamos un chip que extiende las funcionalidades de tu consola y te permite ejecutar copias de juegos</p>
+                    <h1>Chip RP2040</h1>
+                    <p>Extiende las funcionalidades de tu consola y ejecuta copias de seguridad de tus juegos.</p>
                 </article>
                 <article  class="green online">
                     <small>Online</small>
-                    <h1>No perdes el online</h1>
-                    <p>Vas a poder seguir jugando online como lo venias haciendo</p>
+                    <h1>Sigue online</h1>
+                    <p>Disfruta las posibilidades del chip y sigue jugando online como siempre.</p>
                 </article>
                 <article  class="cyan emmu">
                     <small>Emmunand</small>
                     <h1>Emmunand, WHAT?</h1>
-                    <p>Te creamos un copia del sistema original donde vas a poder instalar copias de juegos, esta copia se llama EMMUNAND</p>
+                    <p>Te creamos un copia del sistema <small class="red">(EMMUNAND)</small> original donde vas a poder instalar y jugar a copias de seguridad de tus juegos sin tocar el sistema principal.</p>
+                </article>
+                <article  class="magenta pico">
+                    <small>Picofly</small>
+                    <h1>Chip RP2040</h1>
+                    <p>Extiende las funcionalidades de tu consola y ejecuta copias de seguridad de tus juegos.</p>
+                </article>
+                <article  class="green online">
+                    <small>Online</small>
+                    <h1>Sigue online</h1>
+                    <p>Disfruta las posibilidades del chip y sigue jugando online como siempre.</p>
+                </article>
+                <article  class="cyan emmu">
+                    <small>Emmunand</small>
+                    <h1>Emmunand, WHAT?</h1>
+                    <p>Te creamos un copia del sistema <small class="red">(EMMUNAND)</small> original donde vas a poder instalar y jugar a copias de seguridad de tus juegos sin tocar el sistema principal.</p>
                 </article>
             </section>
-            <button>Reservá tu Chip</button>
+           <!--  <button>Reservá tu Chip</button> -->
         </div>
     </div> 
 </body>
