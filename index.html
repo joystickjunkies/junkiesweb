@@ -6,7 +6,7 @@
     <title>Joystick Junkies</title>
     <style>
         body {
-            background-color: #faf9f9;
+            /* background-color: #faf9f9; */
             color: #070707;
             font-family: monospace;
         }
@@ -23,62 +23,131 @@
             font-size: 24px;
             margin-bottom: 10px;
         }
-        #main .logo h1 {
-            font-size: 1.5vw;
-            line-height: 1.5vw;
+        #main .logoAndVideo h1 {
+            font-size: 2.5vh;
+            line-height: 2.5vh;
             margin-top: 20px;
             font-family: monospace;
             text-align: left;
             width: min-content;
         }
-        #main section.logo{
+        #main section.logoAndVideo{
             padding: 15px;
           /*   background-size: 15px 15px;
             background-image: radial-gradient(circle, #060606 0.7px, rgba(0, 0, 0, 0) 0.7px); */
         }
-        section.content{
+        #articles{
             display: flex;
             flex-wrap: wrap;
         }
-        .content article{
+
+        article{
             display: flex;
             flex-direction: column;
-            max-width: 20%;
+            max-width: 25%;
             padding: 39px 15px;
             min-width: 200px;
             background-color: white;
             margin: 15px;
+        }
+        article p{
+            font-size: 11px;
+            line-height: 19px;
+        }
+        video {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height:100%;
+            z-index: -1;
+        } 
+        .home{
+            display: flex;
+
+        }
+        .logoAndVideo{
+            width: 820px;
+            min-width: 400px;
+            color: white;
+            position: fixed;
+            z-index: -9999;
+        }
+        button{
+            width: 234px;
+            height: 50px;
+            float: right;
+            color: white;
+            background-color: black;
+            border: none;
+            position: fixed;
+            top:67vh;
+            left:56vw;
+            border-radius: 25px;
+        }
+        article.green{
+            border-top: 2px solid green;
+        }
+        article.magenta{
+            border-top: 2px solid magenta;
+        }
+        article.cyan{
+            border-top: 2px solid rgb(0, 183, 255);
+        }
+        article.green small{
+           color:  green;
+        }
+        article.magenta small{
+            color: magenta;
+        }
+        article.cyan small{
+            color:rgb(0, 183, 255);
+        }
+ 
+        .espaciador{
+            width: 820px;
+            min-width: 400px;
+            color: white;
+        }
+
+        @media (max-width:1079px) {
+            article{
+                max-width: 100%;
+                width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
     <div id="main">
-        <section class="logo">
-            <h1>JOYSTICK JUNKIES</h1>
-        </section>
-        <section class="content">
-            <article>
-                <small>04.11.03</small>
-                <h1>Instalación Chip RP2040</h1>
-                <p>Instalamos un chip que extiende las funcionalidades de tu consola y te permite ejecutar copias de juegos</p>
-            </article>
-            <article>
-                <small>04.11.03</small>
-                <h1>Backup del sistema</h1>
-                <p>Relizamos un backup del sistema original para que en caso de errores tengas una copia del mismo.</p>
-            </article>
-            <article>
-                <small>04.11.03</small>
-                <h1>No perdes el online</h1>
-                <p>Vas a poder seguir jugando online como lo venias haciendo</p>
-            </article>
-            <article>
-                <small>04.11.03</small>
-                <h1>Emmunand, WHAT?$#%$%#@</h1>
-                <p>Te creamos un copia del sistema original donde vas a poder instalar copias de juegos, esta copia se llama EMMUNAND</p>
-            </article>
-        </section>
-    </div>
+        <div class="home">
+            <section class="espaciador">
+            </section>
+            <section class="logoAndVideo">
+                <video playinline="true" muted="true" loop="true" autoplay="" src="videos/hd.mp4" type="video/mp4" class="media-document mac video"></video>
+                <h1>JOYSTICK JUNKIES</h1>
+                <small>Nintendo Switch Modchips</small>
+            </section>
+            <section id="articles">
+                <article  class="magenta pico">
+                    <small>Picofly</small>
+                    <h1>Instalación Chip RP2040</h1>
+                    <p>Instalamos un chip que extiende las funcionalidades de tu consola y te permite ejecutar copias de juegos</p>
+                </article>
+                <article  class="green online">
+                    <small>Online</small>
+                    <h1>No perdes el online</h1>
+                    <p>Vas a poder seguir jugando online como lo venias haciendo</p>
+                </article>
+                <article  class="cyan emmu">
+                    <small>Emmunand</small>
+                    <h1>Emmunand, WHAT?</h1>
+                    <p>Te creamos un copia del sistema original donde vas a poder instalar copias de juegos, esta copia se llama EMMUNAND</p>
+                </article>
+            </section>
+            <button>Reservá tu Chip</button>
+        </div>
+    </div> 
 </body>
 </html>
+
