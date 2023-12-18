@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "joystick:build:production"
+              "buildTarget": "joystick:build:production"
             },
             "development": {
-              "browserTarget": "joystick:build:development"
+              "buildTarget": "joystick:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "joystick:build"
+            "buildTarget": "joystick:build"
           }
         },
         "test": {
