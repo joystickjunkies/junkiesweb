@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing'
 import { ReservaComponent } from './reserva.component';
 
 describe('ReservaComponent', () => {
@@ -8,7 +8,7 @@ describe('ReservaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReservaComponent]
+      imports: [ReservaComponent,RouterTestingModule]
     })
     .compileComponents();
     

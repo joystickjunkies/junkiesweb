@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { Router,RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-reserva',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './reserva.component.html',
   styleUrl: './reserva.component.sass'
 })

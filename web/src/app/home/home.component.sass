@@ -1,32 +1,43 @@
 #main
+    small,button
+        font-family: monospace !important
+    h1
+        font-family: monospace !important
+        font-weight: bold
+        font: bolder 1.17em monospace, sans-serif 
     z-index: 2
-    background-size: 15px 15px
-    background-image: radial-gradient(circle, #060606 0.7px, rgba(0, 0, 0, 0) 0.7px)
-    margin: 2vw
-    margin-top: 4vh
-    padding: 50px
-
+    padding: 4vw
+    height: 100%
+    @media (min-width:674px)
+        margin-top: 20px
     .logoAndVideo
-        min-width: 400px
         position: fixed
-
         h1
-            font-size: 2.5vh
-            line-height: 2.5vh
+            font-size: 3.5vh
+            @media (max-width:1274px)
+                font-size: 1.17em
+                padding-bottom: 4px 
+            line-height: 3.5vh
             margin-top: 20px
             font-family: monospace
             text-align: left
             width: min-content
             color: red
 
-#articles
+            &:hover
+                cursor: pointer
+
+/* #articles
     display: flex
     flex-wrap: wrap
-
+    @media (max-width:674px)
+        margin-top: 90px
     article
         display: flex
         flex-direction: column
         max-width: 25%
+        @media (max-width:674px)
+            max-width: 85%
         padding: 39px 15px
         min-width: 200px
         background-color: white
@@ -64,20 +75,10 @@
             small
                 .red
                     color: red
-
-video
-    position: fixed
-    left: 0
-    top: 0
-    height:100%
-    z-index: -1
-
+ */
 .home
     display: flex
-
-    .espaciador
-        min-width: 400px
-        color: white
+    width: 100%
 
 button
     display: block
@@ -89,29 +90,29 @@ button
     border-radius: 25px
     margin-top: 20px
 
+    &:hover
+        color: green
+        background-color: white
+        border: 1px solid green
+        cursor: pointer
 
 
-@media (max-width:674px)
+@media (max-width:1274px)
     body
         margin: 0
-    #main
-        margin: 0
-        margin-top: 0
-        padding: 0
     .home
         flex-direction: column
     #main
         height: 100%
+        margin: 0
+        padding: 0px
 
         .logoAndVideo
-            width: 94vw
+            width: 90%
             background-color: white
             display: flex
-            align-items: center
-            margin: 0px
-            padding: 10px 15px
-            justify-content: space-between
-            min-width: auto
+            flex-direction: column
+            padding: 16px 30px
 
             h1
                 font-size: 2vh
@@ -119,23 +120,29 @@ button
                 margin: 0px
 
             button
+                display: block
                 position: fixed
-                left:22vw
-                top:80vh
+                bottom: 45px
+                left: 50%
+                transform: translateX(-50%)
+                width: 80%
+                padding: 17px
+                background-color: black
 
-
-    #article
+@media (max-width:674px)
+    article
         margin: 2vw
         padding: 50px
+        max-width: 84%
 
 
 @media(max-width:574px)
-    article
-        width: 100%
-        max-width: 100%
+article
+    width: 100%
+    max-width: 100%
  
 
-@media (max-width:1079px) and (min-width:875px)
+@media (min-width:875px) and (max-width:1079px) 
     article
         max-width: 100%
         width: 40%
