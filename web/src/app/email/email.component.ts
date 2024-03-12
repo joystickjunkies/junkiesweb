@@ -24,10 +24,10 @@ import { SuccessComponent } from '../success/success.component';
     LoaderComponent,
     SuccessComponent
   ],
-  providers:[ EmailserviceService]
+  providers:[ ]
 })
 export class EmailComponent {
-  errorMessage: string = '';
+  errorMessage: string = 'hola';
   loading: boolean = false;
   success: boolean = false;
   successMsg:string = "Tu mensaje ha sido enviado, pronto te estaremos respondiendo."
@@ -54,9 +54,9 @@ export class EmailComponent {
             this.modchipForm.reset();
             this.success = true;
             this.loading= false;
+            this.errorMessage="esta todo ok chango"
           },
           error: (error) => {
-            console.error('error!', error);
             this.errorMessage = 'Hubo un problema al enviar el mensaje'; // Configurar mensaje de error.
 
             this.loading = false;

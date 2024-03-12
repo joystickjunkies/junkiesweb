@@ -30,7 +30,6 @@ export class HomeComponent {
   }
 
   ngOnDestroy() {
-    // Asegurarse de desuscribirse para evitar fugas de memoria
     this.routerSubscription.unsubscribe();
   }
 
