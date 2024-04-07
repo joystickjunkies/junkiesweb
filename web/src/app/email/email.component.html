@@ -20,7 +20,7 @@
         <mat-select formControlName="switchModel">
           <mat-option value="normal">Normal</mat-option>
           <mat-option value="lite">Lite</mat-option>
-          <mat-option value="oled">OLED</mat-option>
+          <mat-option value="oled">Oled</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
@@ -29,7 +29,7 @@
       <textarea matInput formControlName="menssage"></textarea>
     </mat-form-field>
   
-    <button mat-raised-button color="primary" type="submit" [disabled]="loading">Enviar</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="loading">Enviar Mail</button>
   </form>
   
   <app-loader *ngIf="loading && !success" ></app-loader>
