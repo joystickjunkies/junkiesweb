@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/chipeo",
+    "/reserva",
+    "/reserva/email",
+    "/reserva/email/loader",
+    "/reserva/whatsapp",
+    "/succeess"
+  ]
+}
