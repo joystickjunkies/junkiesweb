@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - develop
-
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,10 +22,10 @@ jobs:
       run: npm install
 
     - name: Build project
-      run: npm run build -- --output-path=dist/web/browser
+      run: npm run build --configuration production
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: JamesIves/github-pages-deploy-action@4.5.0
       with:
         branch: main
         folder: dist/web/browser
