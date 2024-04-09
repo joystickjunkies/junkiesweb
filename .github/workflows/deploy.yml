@@ -28,3 +28,4 @@ jobs:
       with:
         branch: main
         folder: dist/web/browser
+        token: ${{ secrets.MY_PERSONAL_TOKEN }} 
