@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+app-reserva
+    flex-grow: 1
+app-chipeo, app-reserva
+    max-width: 80%
+    margin-left: 25%
+    @media (max-width:1274px)
+        margin-left: 0%
+        padding: 40px
+        max-width: 100%
+app-reserva
+    margin-left: 0
+    @media (max-width:674px)
+        margin-left: 0
+app-email
+    margin-top: 35px
+    @media (max-width:674px)
+        margin-top: 0px
+
+
+body
+    background-size: 15px 15px
+    background-image: radial-gradient(circle, #060606 0.7px, rgba(0, 0, 0, 0) 0.7px)
+    height: 100vh
+
+    textarea
+        height: 160px
+        @media (max-width:1274px)
+            height: 90px !important
+        resize: none !important
+        overflow-y: auto !important
