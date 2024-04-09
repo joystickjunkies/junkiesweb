@@ -28,4 +28,6 @@ jobs:
       with:
         branch: main
         folder: dist/web/browser
+        clean: true
+        clean-exclude: '["CNAME"]'
         token: ${{ secrets.MY_PERSONAL_TOKEN }} 
