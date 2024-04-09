@@ -28,4 +28,3 @@ jobs:
       with:
         branch: main
         folder: dist/web/browser
-        token: ${{ secrets.GITHUB_TOKEN }} 
