@@ -5,7 +5,10 @@ div
     align-items: center
     button
         text-transform: uppercase
-        width: 16%
+        @media(max-width:674px)
+            min-width: 245px
+            border-radius: 30px
+        min-width: 16%
         margin-top: 19px
         padding: 17px
         color: white

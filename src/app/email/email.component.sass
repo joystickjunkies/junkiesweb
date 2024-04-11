@@ -26,6 +26,9 @@ section
     align-items: flex-start
     @media(max-width:574px)
       flex-direction: column
+    @media(max-width:400px)
+      &.celuswitch
+        flex-direction: row   
     mat-form-field
       width: 49%
       @media(max-width:574px)
@@ -50,3 +53,9 @@ section
   margin: auto
   @media(max-width:574px)
     max-width: 350px
+@media(max-width:400px)
+  ::ng-deep
+    .responsivePhone div,.responsiveModel div
+     max-width: 8.5em !important
+    .responsiveModel
+      align-items: flex-end !important
